@@ -1,0 +1,422 @@
+/* Estilo Dark */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+}
+
+header {
+    background-color: #1e1e2f; /* Fundo escuro */
+    color: #bb86fc; /* Roxo claro */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; /* Alinha o conteúdo ao centro */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 20px; /* Espaço entre o título e a imagem */
+    margin: 20px 0;
+}
+/* Estilo do logo */
+#logo {
+    position: absolute; /* Fixa a posição */
+    top: 50px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    width: 100px; /* Ajuste o tamanho do logo */
+    height: auto; /* Mantém a proporção do logo */
+    z-index: 1000; /* Garante que o logo fique acima dos outros elementos */
+}
+
+/* O restante do seu CSS permanece o mesmo */
+
+
+#mascote {
+    width: 100px; /* Ajuste a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    background: linear-gradient(45deg, #03dac5, #bb86fc);
+    background-size: 400% 400%;
+    color: transparent;
+    background-clip: text;
+    animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#mascote {
+    width: 80px; /* Largura da imagem */
+}
+nav {
+    display: block; /* Garante que o menu fique abaixo, como antes */
+    margin-top: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #03dac5; /* Azul claro */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Contêiner principal de cards */
+main {
+    display: flex;
+    justify-content: center; /* Centraliza os cards */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha em telas pequenas */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px;
+}
+
+/* Estilo de cada card */
+.card {
+    background-color: #1e1e2f; /* Cor de fundo do card */
+    color: white;
+    width: 300px; /* Largura dos cards */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Organiza os itens dentro do card em coluna */
+    align-items: center; /* Alinha os itens ao centro */
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do ícone dentro do card */
+.card-icon {
+    width: 50px; /* Tamanho do ícone */
+    height: auto;
+    margin-bottom: 15px; /* Espaço entre o ícone e o título */
+}
+
+/* Botão dentro do card */
+.card button {
+    background: linear-gradient(45deg, #03dac5, #bb86fc); /* Gradiente no botão */
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s, opacity 0.2s;
+    margin-top: 15px;
+}
+
+/* Efeito no botão ao passar o mouse */
+.card button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Estilo para a barra de pesquisa */
+#search-bar {
+    display: flex;
+    justify-content: center; /* Centraliza a barra de pesquisa */
+    align-items: center;
+    gap: 10px; /* Espaço entre os campos */
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+}
+
+#search-bar input, #search-bar select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #282828;
+    background-color: #1e1e2f;
+    color: white;
+}
+
+#search-bar button {
+    padding: 10px 20px;
+    background-color: #03dac5;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#search-bar button:hover {
+    background-color: #bb86fc;
+}
+
+button {
+    background: linear-gradient(45deg, #03dac5, #bb86fc); /* Gradiente azul e roxo */
+    color: #121212; /* Texto escuro */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+/* Botão flutuante */
+#help-icon {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    background-color: #03dac5; /* Cor de fundo */
+    border-radius: 50%; /* Faz o botão redondo */
+    padding: 15px;
+    font-size: 24px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Largura fixa do botão */
+    height: 60px; /* Altura fixa do botão */
+}
+
+/* Efeito de hover para o botão */
+#help-icon:hover {
+    background-color: #bb86fc;
+}
+
+/* Estilo do ícone dentro do botão */
+#help-icon span {
+    font-size: 30px; /* Ajuste o tamanho do ícone se necessário */
+}
+
+
+/* Estilo do chatbox */
+#chatbox {
+    position: fixed;
+    bottom: 70px; /* Distância do fundo, um pouco acima do botão */
+    right: 20px; /* Distância da direita */
+    width: 300px;
+    background-color: #1e1e2f;
+    border: 1px solid #282828;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    color: #ffffff;
+    display: none; /* Inicialmente escondido */
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Efeitos do chat */
+#chat-header {
+    background-color: #03dac5;
+    color: #121212;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+#chat-content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+#chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #282828;
+}
+
+#chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+#chat-input button {
+    background: linear-gradient(45deg, #03dac5, #bb86fc);
+    border: none;
+    color: #121212;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chat-input button:hover {
+    opacity: 0.9;
+}
+
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.bot {
+    background-color: #bb86fc;
+    color: #121212;
+    text-align: left;
+}
+
+.message.user {
+    background-color: #03dac5;
+    color: #121212;
+    text-align: right;
+}
+
+#chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #282828;
+}
+
+#chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+#chat-input button {
+    background: linear-gradient(45deg, #03dac5, #bb86fc);
+    border: none;
+    color: #121212;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#chat-input button:hover {
+    opacity: 0.9;
+}
+
+/* Painel do Usuário fixo no topo direito (não rola com o conteúdo) */
+#user-panel {
+    position: absolute; /* Muda de fixed para absolute */
+    top: 20px; /* Distância do topo da tela */
+    right: 20px; /* Distância da borda direita */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e2f;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+    z-index: 10;
+    max-width: 80px; /* Limita a largura para manter o layout compacto */
+}
+
+#user-panel:hover {
+    transform: scale(1.05);
+}
+
+#user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #03dac5;
+    margin-bottom: 10px;
+}
+
+#user-points {
+    font-weight: bold;
+    color: #03dac5;
+    margin-bottom: 5px;
+}
+
+#user-status {
+    font-size: 14px;
+    color: #bb86fc;
+}
+
+/* Menu do Aluno */
+#user-menu {
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    width: 200px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    border: 1px solid #282828;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    z-index: 10;
+}
+
+#user-menu.hidden {
+    display: none;
+}
+
+#user-menu button {
+    background: linear-gradient(45deg, #03dac5, #bb86fc);
+    border: none;
+    color: #121212;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+#user-menu button:hover {
+    opacity: 0.9;
+}

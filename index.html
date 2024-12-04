@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexaCoders</title>
+    <link rel="icon" href="logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Logo" id="logo">
+        <div id="user-panel">
+            <img src="avatar.png" alt="Avatar do Aluno" id="user-avatar">
+            <div id="user-info">
+                <span id="user-points">💎 120 pontos</span>
+                <span id="user-status">Estudioso</span>
+            </div>
+        </div>
+        
+        <!-- Menu do Aluno -->
+        <div id="user-menu" class="hidden">
+            <h3>Menu do Aluno</h3>
+            <p>Pontuação: 120</p>
+            <p>Status: Estudioso</p>
+            <button onclick="fecharMenu()">Fechar</button>
+        </div>
+        
+        <!-- Título e Mascote no Cabeçalho -->
+        <div id="title-mascote">
+            <h1>HexaCoders<img src="mascote.png" alt="Mascote" id="mascote"></h1>
+            
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+            <li><a href="#pontuacao">Pontuação</a></li>
+            <li><a href="#ajuda">Dúvidas com IA</a></li>
+        </ul>
+    </nav>
+    <!-- Barra de Pesquisa e Filtro de Matérias -->
+<div id="search-bar">
+    <input type="text" id="search-input" placeholder="Buscar por matéria...">
+    <select id="subject-filter">
+        <option value="">Selecione uma matéria</option>
+        <option value="matematica">Matemática</option>
+        <option value="portugues">Português</option>
+        <option value="ingles">Inglês</option>
+        <option value="historia">História</option>
+        <!-- Adicione outras opções conforme necessário -->
+    </select>
+    <button onclick="filterCards()">Filtrar</button>
+</div>
+
+    <main>
+        <section id="videos" class="card">
+            <img src="videoeducativo.png" alt="Ícone de Vídeos" class="card-icon">
+            <h2>Vídeos Educativos</h2>
+            <p>Assista a vídeos curtos sobre diferentes matérias.</p>
+            <button onclick="exibirMensagem('Vídeos')">Ver Mais</button>
+        </section>
+    
+        <section id="quiz" class="card">
+            <img src="quiz.png" alt="Ícone de Quiz" class="card-icon">
+            <h2>Quiz Interativo</h2>
+            <p>Teste seus conhecimentos com quizzes divertidos.</p>
+            <button onclick="exibirMensagem('Quiz')">Começar</button>
+        </section>
+    
+        <section id="jogos" class="card">
+            <img src="jogos.png" alt="Ícone de Jogos" class="card-icon">
+            <h2>Jogos Educativos</h2>
+            <p>Aprenda brincando com jogos interativos.</p>
+            <button onclick="exibirMensagem('Jogos')">Jogar</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Aprendizagem Interativa</p>
+        <!-- Botão para abrir o chatbox -->
+        <button id="help-icon" onclick="toggleChatbox()">
+            <span style="font-size: 24px; color: #af05f3;">&#63;</span> <!-- Ícone de ponto de interrogação -->
+        </button>
+    </footer>
+    
+    <script src="scripts.js"></script>
+    
+    <!-- Chatbox -->
+    <div id="chatbox" style="display: none;">
+        <header id="chat-header">Dúvidas com IA</header>
+        <div id="chat-content">
+            <div class="message bot">Olá! Como posso ajudar você hoje?</div>
+        </div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua dúvida aqui...">
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
