@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Educativos</title>
+    <link rel="icon" href="logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+
+    <!-- Cabeçalho com Título, Imagem e Avatar -->
+    <header>
+        <div class="header-left">
+            <img src="jogos.png" alt="Jogos Educativos" class="header-img">
+            <h1>Jogos Educativos</h1>
+        </div>
+            <div id="user-panel">
+                <img src="avatar.png" alt="Avatar do Aluno" id="user-avatar">
+                <div id="user-info">
+                    <span id="user-name">João dos Santos</span>
+                    <span id="user-points">💎 120 pontos</span>
+                    <span id="user-status">Estudioso</span>
+                </div>
+            </div>
+            
+            <!-- Menu do Aluno -->
+            <div id="user-menu" class="hidden">
+                <h3>Menu do Aluno</h3>
+                <p><b>Pontuação:</b> 120</p>
+                <p><b>Status:</b> Estudioso</p>
+                <p><b>Turma:</b> Técnico em Programação de Jogos Digitais</p>
+                <p><b>Período:</b> Integral</p>
+                <button onclick="fecharMenu()">Fechar</button>
+            </div>
+            
+        </div>
+    </header>
+     <!-- Menu de Navegação Rápida -->
+     <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li> <!-- Link para a página principal -->
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#pontuacao">Pontuação</a></li>
+            <li><a href="#ajuda" id="help-link">Dúvidas com IA</a></li>
+        </ul>
+    </nav>
+
+    <!-- Barra de Pesquisa e Filtro de Matérias -->
+<div id="search-bar">
+    <input type="text" id="search-input" placeholder="Buscar por matéria...">
+    <select id="subject-filter">
+        <option value="">Selecione uma matéria</option>
+        <option value="matematica">Matemática</option>
+        <option value="portugues">Português</option>
+        <option value="ingles">Inglês</option>
+        <option value="historia">História</option>
+        <!-- Adicione outras opções conforme necessário -->
+    </select>
+    <button onclick="filterCards()">Filtrar</button>
+</div>
+
+    <!-- Seção de Jogos -->
+    <div id="games-list">
+        <h2>Jogos Iniciais</h2>
+        <div class="game-item" onclick="startGame('Khan Academy - Matemática')">
+            <img src="https://via.placeholder.com/150" alt="Khan Academy Matemática">
+            <p><a href="https://www.khanacademy.org/math" target="_blank">Khan Academy - Matemática</a></p>
+        </div>
+        <div class="game-item" onclick="startGame('Cool Math Games')">
+            <img src="https://via.placeholder.com/150" alt="Cool Math Games">
+            <p><a href="https://www.coolmathgames.com/" target="_blank">Cool Math Games</a></p>
+        </div>
+
+        <h2>Jogos por Matéria</h2>
+        <div class="game-item" onclick="startGame('PhET - Ciências')">
+            <img src="https://via.placeholder.com/150" alt="PhET Ciências">
+            <p><a href="https://phet.colorado.edu/pt_BR/" target="_blank">PhET - Ciências</a></p>
+        </div>
+        <div class="game-item" onclick="startGame('BrainPOP - Ciências')">
+            <img src="https://via.placeholder.com/150" alt="BrainPOP Ciências">
+            <p><a href="https://br.brainpop.com/games/" target="_blank">BrainPOP - Ciências</a></p>
+        </div>
+        <div class="game-item" onclick="startGame('Jogo de Palavras - Português')">
+            <img src="https://via.placeholder.com/150" alt="Jogo de Palavras Português">
+            <p><a href="https://www.jogosdeportugues.com.br/" target="_blank">Jogo de Palavras - Português</a></p>
+        </div>
+        <div class="game-item" onclick="startGame('Jogos Educativos - Português')">
+            <img src="https://via.placeholder.com/150" alt="Jogos Educativos Português">
+            <p><a href="https://www.jogoseducativos.com.br/jogos-de-lingua-portuguesa/" target="_blank">Jogos Educativos - Português</a></p>
+        </div>
+    </div>
+    <!-- Chatbox -->
+    <div id="chatbox" style="display: none;">
+        <header id="chat-header">Dúvidas com IA</header>
+        <div id="chat-content">
+            <div class="message bot">Olá! Como posso ajudar você hoje?</div>
+        </div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua dúvida aqui...">
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -400,6 +400,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 15px;
     z-index: 10;
+    text-align: left;
 }
 
 #user-menu.hidden {
@@ -419,4 +420,191 @@ button:hover {
 
 #user-menu button:hover {
     opacity: 0.9;
+}
+/* Estilo do painel de informações do aluno */
+#user-panel {
+    position: absolute; /* Muda de fixed para absolute */
+    top: 20px; /* Distância do topo da tela */
+    right: 20px; /* Distância da borda direita */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e2f;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+    z-index: 10;
+    max-width: 200px; /* Limita a largura para manter o layout compacto */
+}
+
+/* Estilo das informações */
+#user-info {
+    color: white;
+    font-size: 14px; /* Tamanho da fonte para as informações */
+}
+
+#user-info span {
+    display: block;
+    margin-bottom: 8px; /* Espaço entre as informações */
+}
+
+/* Estilo para o nome do aluno */
+#user-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #03dac5; /* Cor para o nome */
+}
+
+/* Estilo para os outros textos */
+#user-points, #user-status, #user-class, #user-period {
+    font-size: 14px;
+    color: #bb86fc; /* Cor roxa */
+}
+nav ul li a:hover {
+    color: #bb86fc; /* Mudança na cor do link ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento no tamanho do link */
+    transition: all 0.3s ease;
+}
+.card-icon {
+    width: 70px; /* Aumenta o tamanho do ícone */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #03dac5; /* Cor para títulos */
+}
+#user-panel {
+    transition: transform 0.3s ease;
+}
+
+#user-panel:hover {
+    transform: scale(1.1);
+}
+#games-list {
+    padding: 20px;
+}
+
+.game-item {
+    display: inline-block;
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.game-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00BFFF;
+}
+
+/* Estilos para o hover nos jogos */
+.game-item:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+/* Para garantir que a imagem do título não ultrapasse 150px de largura */
+/* Cabeçalho com Título e Imagem */
+.header-left {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+}
+
+.header-left img {
+    width: 60px; /* Ajuste o valor conforme necessário para a imagem */
+    height: auto;
+    margin-right: 10px; /* Espaçamento entre a imagem e o título */
+}
+
+.header-left h1 {
+    font-size: 40px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+
+/* Para garantir que o avatar não ultrapasse 50px */
+.avatar-img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+}
+/* Estilo para o Avatar no Canto Superior Direito */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Coloca o conteúdo no canto direito */
+    position: relative; /* Necessário para o posicionamento do menu */
+}
+
+.avatar {
+    position: relative; /* Necessário para o menu suspenso */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    width: 40px; /* Tamanho da imagem do avatar */
+    height: 40px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.avatar-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px; /* Ajuste o tamanho da fonte se necessário */
+    color: white; /* Cor do texto */
+}
+
+.avatar-status, .avatar-points {
+    margin: 0;
+}
+
+.avatar-menu {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 50px; /* Ajuste conforme necessário */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.avatar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.avatar-menu li {
+    padding: 8px 15px;
+    text-align: center;
+}
+
+.avatar-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.avatar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar o menu quando o avatar for clicado */
+.avatar.active + .avatar-menu {
+    display: block;
 }
